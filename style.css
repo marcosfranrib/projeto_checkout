@@ -81,11 +81,10 @@
 
 
 #container-topo{
-    background-image: url(imagens/bg-main-mobile.png);
     height: 15rem;
-
+    width: 100%;
+    background: url(imagens/bg-main-mobile.png) no-repeat / cover; 
 }
-
 
 #container-cadastro{
     padding-top: 4.5rem;
