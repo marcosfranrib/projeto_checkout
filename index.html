@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div id="front-card">
+        <span id="circulo"></span>
+        <span id="circulo2"></span>
+        <span class="exNumero">0000 0000 0000 0000</span>
+        <span id="nomeData">
+            
+            <span class="nomeData" id="exNome">ANDRADE SILVA</span>
+            
+            <span class="nomeData">
+            
+                <span class="nomeData" id="mes">00</span>/<span class="nomeData" id="ano">20</span>
+            
+            </span>
+        
+        </span>
+        
+        <img src="imagens/bg-card-front.png" alt="">
+        
+    </div>
+
+    <div id="back-card">
+        <span id="cvc">000</span>
+        <img src="imagens/bg-card-back.png" alt="">
+    </div>
+    
+    <section id="container-topo"></section>
+
+    <form id="container-cadastro" method="post" >
+        
+        <div class="container-input">
+           
+            <label for="card-name" class="label">NOME NO CARTÃO</label>
+            <input type="text" name="" id="card-name" maxlength="30" placeholder="ex.: Andrade Silva">
+        
+        </div>
+        
+        <div class="container-input">
+
+            <label for="card-number" class="label">NÚMERO DO CARTÃO</label>
+            
+            <input type="text" name="" id="card-number" placeholder="5555 2222 1111 3333">
+
+        </div>
+       
+        <label for="data" class="label codigo">VALIDADE (MM/AA)</label>
+        <label for="dgCvc" class="label codigo">CÓDIGO DE SEGURANÇA</label>
+        
+        <input type="text" name="" class="data" id="dgMes" placeholder="MM">
+        <input type="text" name="" class="data" id="dgAno" placeholder="AA">
+        <input type="text" name="" class="data cvc" id="dgCvc" placeholder="CVC">
+
+        <input type="submit" value="CONFIRMAR" id="submit">
+      
+        
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
