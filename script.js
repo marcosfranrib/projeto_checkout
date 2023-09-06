@@ -1,4 +1,5 @@
 //Atribuição do DOM
+    
     const dgNumero = document.querySelector('#card-number')
     const dgNome = document.querySelector('#card-name')
     const dgMes = document.querySelector('#dgMes')
@@ -9,34 +10,40 @@
     const mes = document.querySelector('#mes')
     const ano = document.querySelector('#ano')
     const cvc = document.querySelector('#cvc')
-   
-// Funções que exibem no cartão o valor digitado no input
+    let checkbox = document.querySelector('#check')
 
+
+//Funções para modelar os padrões de entrada
+   
     function exibir(valor1,valor2){     
-        //Função modelo para exibição do valor
+        
         valor1.innerHTML = valor2.value;
 
     }
 
     function padrao(num) {
         const regex = /(\d{4})(?=\d)/g;
+        num.value = num.value.replace(/[^0-9]/g, '')
         num.value = num.value.replace(regex,'$1 ')
         num.value = num.value.trim()
-        
     }
 
-    dgNumero.addEventListener('keyup',()=>{
-        
-        numero.innerHTML = dgNumero.value;
-        if(numero.innerHTML == ''){
-            numero.innerHTML = '0000 0000 0000 0000'
+// Eventos de entrada de input
+   
+    dgNumero.addEventListener('input', () =>{
+        console.log(dgNumero.value.length);
+        if (dgNumero.value == '') {
+            checkbox.checked = true
+            
+        }else{
+            checkbox.checked = false
+            numero.innerHTML = dgNumero.value;
         }
 
         padrao(dgNumero)
         exibir(numero,dgNumero)
-        
-    })
 
+    })
 
     dgNome.addEventListener('keyup',()=>{
         exibir(nome,dgNome)

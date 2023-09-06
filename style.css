@@ -9,6 +9,14 @@
     font-size: 15px;
 }
 
+#check{
+    display: none;
+}
+
+#check:checked ~ .exNumero::after{
+    content: '0000 0000 0000 0000';
+}
+
 #front-card{
     position: absolute;
     top: 7.3rem;
@@ -54,6 +62,8 @@
     left: 1.3rem;
 }
 
+
+
 #nomeData{
     position: absolute;
     display: flex;
@@ -65,10 +75,12 @@
  
 }
 
-.nomeData{
-    font-size: 8px;
-    letter-spacing: 1.5px;
+#data,#mes,#ano,#exNome{
+    font-size: 10px;
+}
 
+#data{
+    letter-spacing: 1.5px;
 }
 
 #cvc{
@@ -81,10 +93,14 @@
 
 
 #container-topo{
+    background-image: url(imagens/bg-main-mobile.png);
     height: 15rem;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    background: url(imagens/bg-main-mobile.png) no-repeat / cover; 
+
 }
+
 
 #container-cadastro{
     padding-top: 4.5rem;

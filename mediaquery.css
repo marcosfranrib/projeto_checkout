@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+@media screen and (min-width: 550px) and (max-width: 1440px) {
+    
+    
+    
+    *{
+        overflow-y: hidden;
+    
+    }
+   
+    #container-geral{
+        display: flex;
+    }
+
+    #container-topo{
+        height: 41.3rem;
+        width: 28rem;
+    
+    }
+
+    #container-cadastro{
+        padding-top: 0;
+    
+    }
+
+    #front-card{
+        top: 7rem;
+        left: 12rem;
+    }
+
+    #front-card,img,#back-card{
+        height: 12rem;
+        width: 20rem;
+    }
+
+    #back-card{
+        top: 21rem;
+        left: 17rem;
+       
+    }
+
+    #cvc{
+        font-size: 13px;
+        top: 5.3rem;
+        left: 15rem;
+    }
+
+    .exNumero{
+        top: 7rem;
+        left: 1.4rem;
+        letter-spacing: 3px;
+        font-size: 17px;
+        z-index: 1;
+    }
+
+    #nomeData{
+        top: 9.4rem;
+        padding: 0 20px;
+     
+    }
+
+    #exNome,#ano,#mes{
+        font-size: 10px;
+    }
+
+}
