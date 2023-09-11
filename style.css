@@ -9,14 +9,6 @@
     font-size: 15px;
 }
 
-#check{
-    display: none;
-}
-
-#check:checked ~ .exNumero::after{
-    content: '0000 0000 0000 0000';
-}
-
 #front-card{
     position: absolute;
     top: 7.3rem;
@@ -101,8 +93,8 @@
 
 }
 
-
 #container-cadastro{
+    position: relative;
     padding-top: 4.5rem;
     margin: auto;
     width: 21rem;
@@ -112,12 +104,24 @@
     margin-bottom: 20px;
 }
 
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
 .label{
    display: block;
    margin-bottom: 7px;
    margin-left: 2px;
    font-size: 13px;
    width: 150px;
+
+}
+
+p{
+    display: none;
+    font-size: 12px;
+    color: red;
 
 }
 
@@ -155,6 +159,17 @@ input::placeholder{
 .cvc{
     width: 10.4rem;
 
+}
+
+#p-data{
+    position: absolute;
+    display: none;
+}
+
+#p-cvc{
+    display: none;
+    position: absolute;
+    left: 12.4rem;
 }
 
 #submit{

@@ -3,43 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaquery.css">
 </head>
 <body>
 
-   
-   
     <div id="container-geral">
         <section id="container-topo"></section>
+        <div id="front-card">
+        
+            <span id="circulo"></span>
+            <span id="circulo2"></span>
+            <span class="exNumero">0000 0000 0000 0000</span>
+            <span id="nomeData">
+                <span id="exNome">SEU NOME AQUI</span>
+                <span id="data"><span id="mes">00</span>/<span id="ano">00</span></span>
+            </span>
+    
+            <img src="imagens/bg-card-front.png" alt="">
+    
+        </div>
+    
+        <div id="back-card">
+            <span id="cvc">000</span>
+            <img src="imagens/bg-card-back.png" alt="">
+        </div>
+        
         
         <form id="container-cadastro" method="post">
-        
-            <div id="front-card">
-        
-                <span id="circulo"></span>
-                <span id="circulo2"></span>
-                <input type="checkbox" name="" id="check">
-                <span class="exNumero">0000 0000 0000 0000</span>
-                <span id="nomeData">
-                    <span id="exNome">SEU NOME AQUI</span>
-                    <span id="data"><span id="mes">00</span>/<span id="ano">00</span></span>
-                </span>
-        
-                <img src="imagens/bg-card-front.png" alt="">
-        
-            </div>
-        
-            <div id="back-card">
-                <span id="cvc">000</span>
-                <img src="imagens/bg-card-back.png" alt="">
-            </div>
-        
+            
             <div class="container-input">
-        
+
                 <label for="card-name" class="label">NOME NO CARTÃO</label>
                 <input type="text" name="" id="card-name" maxlength="30" placeholder="ex.: Andrade Silva">
+                <p id="p-nome">Preencha este campo</p>
         
             </div>
         
@@ -47,6 +45,7 @@
 
                 <label for="card-number" class="label">NÚMERO DO CARTÃO</label>
                 <input type="text" name="" id="card-number" placeholder="5555 2222 1111 3333" maxlength="19">
+                <p id="p-numero">Preencha este campo</p>
 
             </div>
         
@@ -56,6 +55,9 @@
             <input type="text" name="" class="data" id="dgMes" placeholder="MM">
             <input type="text" name="" class="data" id="dgAno" placeholder="AA">
             <input type="text" name="" class="data cvc" id="dgCvc" placeholder="CVC">
+            <p id="p-data">Preencha o campo</p><p id="p-cvc">Preencha este campo</p>
+            
+
             <input type="submit" value="CONFIRMAR" id="submit">
         
         
