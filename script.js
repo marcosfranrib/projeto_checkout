@@ -1,5 +1,4 @@
 //Atribuição do DOM
-    
     const dgNumero = document.querySelector('#card-number')
     const dgNome = document.querySelector('#card-name')
     const dgMes = document.querySelector('#dgMes')
@@ -20,7 +19,7 @@
 //Funções para modelar os padrões de entrada
    
     function exibir(valor1,valor2){     
-        valor1.innerHTML = valor2.value;
+        valor1.innerText = valor2.value;
     }
 
     function padrao(num) {
@@ -44,17 +43,29 @@
         }
     }
 
+    function zeroE(input,exib) {
+        if (input.value <= 9 && input.value >= 1 && input.value.length <= 1) {
+            input.value = `0${input.value}`
+            exib.innerHTML = input.value
+
+        } else if(input.value <= 0){
+            input.value = ''
+            exib.innerHTML = '00'
+        }
+    }
+
     function envio() {
-        let alerta;
+        let alerta = '';
         for (let i = 0; i < array.length; i++) {
             if (array[i].value == '') {
                 array[i].style.borderColor = 'red'
                 alerta = 'Preencha os campos vazios'
             }
         }   
-      return alerta
+      return alerta;
     }
     
+
 // Eventos de entrada de input
    
     dgNumero.addEventListener('input', () =>{
@@ -63,22 +74,37 @@
         alerta(dgNumero,pNumero,numero,'0000 0000 0000 0000')  
 
     })
-  
+
     dgNome.addEventListener('input',()=>{
+        dgNome.value = dgNome.value.replace(/[0-9]/g,'')
+        dgNome.value = dgNome.value.toUpperCase()
         exibir(nome,dgNome)
-        alerta(dgNome,pNome,nome,'SEU NOME AQUI')  
+        alerta(dgNome,pNome,nome,'seu nome aqui')  
         
     })
 
     dgMes.addEventListener('input',()=>{
+        if (dgMes.value > 12) {
+            dgMes.value = 12
+        }
         exibir(mes,dgMes)
         alerta(dgMes,pData,mes,'00')  
         
     })
 
+    
+    dgMes.addEventListener('blur',()=>{
+        zeroE(dgMes,mes)
+    })
+
+
     dgAno.addEventListener('input',()=>{
         exibir(ano,dgAno)
         alerta(dgAno,pData,ano,'00') 
+    })
+
+    dgAno.addEventListener('blur',()=>{
+        zeroE(dgAno,ano)
     })
 
     dgCvc.addEventListener('input',()=>{
@@ -88,15 +114,15 @@
     })
 
     submit.addEventListener('click',(e)=>{
-        if (envio()) {
+        const enviar = envio()
+        if (enviar) {
             e.preventDefault()
-            alert(envio())
+            alert(enviar)
 
        } else{
-            this.submit()
+            window.location.href = "http://www.devmedia.com.br/guia/javascript/34372";
+            e.preventDefault()
+            console.log('passei do prevent');
        }
     
     })
-
-
-    

@@ -31,7 +31,7 @@
         </div>
         
         
-        <form id="container-cadastro" method="post">
+        <form id="container-cadastro" method="get">
             
             <div class="container-input">
 
@@ -44,21 +44,20 @@
             <div class="container-input">
 
                 <label for="card-number" class="label">NÚMERO DO CARTÃO</label>
-                <input type="text" name="" id="card-number" placeholder="5555 2222 1111 3333" maxlength="19">
+                <input type="text" name="" id="card-number" placeholder="5555 2222 1111 3333" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}">
                 <p id="p-numero">Preencha este campo</p>
 
             </div>
         
-            <label class="label codigo">VALIDADE (MM/AA)</label>
-            <label class="label codigo">CÓDIGO DE SEGURANÇA</label>
+            <label class="label codigo" for="dgMes">VALIDADE (MM/AA)</label>
+            <label class="label codigo" for="dgCvc">CÓDIGO DE SEGURANÇA</label>
         
-            <input type="text" name="" class="data" id="dgMes" placeholder="MM">
-            <input type="text" name="" class="data" id="dgAno" placeholder="AA">
-            <input type="text" name="" class="data cvc" id="dgCvc" placeholder="CVC">
+            <input type="text" name="" class="data" id="dgMes" placeholder="MM" maxlength="2" pattern="\d{2}">
+            <input type="text" name="" class="data" id="dgAno" placeholder="AA" maxlength="2" pattern="\d{2}">
+            <input type="text" name="" class="data cvc" id="dgCvc" placeholder="CVC" maxlength="3" pattern="\d{3}">
             <p id="p-data">Preencha o campo</p><p id="p-cvc">Preencha este campo</p>
             
-
-            <input type="submit" value="CONFIRMAR" id="submit">
+            <input type="submit" value="CADASTRAR" id="submit">
         
         
         </form>
