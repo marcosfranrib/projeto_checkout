@@ -54,7 +54,7 @@
         }
     }
 
-    function envio() {
+    function verificarEnvio() {
         let alerta = '';
         for (let i = 0; i < array.length; i++) {
             if (array[i].value == '') {
@@ -114,14 +114,14 @@
     })
 
     submit.addEventListener('click',(e)=>{
-        const enviar = envio()
-        if (enviar) {
+        const verificar = verificarEnvio()
+        if (verificar) {
             e.preventDefault()
-            alert(enviar)
+            alert(verificar)
 
-       } else{
+       }else{
+           
             window.location.href = "http://www.devmedia.com.br/guia/javascript/34372";
-            e.preventDefault()
             console.log('passei do prevent');
        }
     

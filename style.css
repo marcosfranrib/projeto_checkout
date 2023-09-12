@@ -173,6 +173,7 @@ input::placeholder{
 }
 
 #submit{
+    cursor: pointer;
     margin-top: 10%;
     padding: 1rem;
     border: none;
