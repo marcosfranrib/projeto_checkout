@@ -85,7 +85,7 @@
 
 
 #container-topo{
-    background-image: url(imagens/bg-main-mobile.png);
+    background-image: url(/imagens/bg-main-mobile.png);
     height: 15rem;
     background-repeat: no-repeat;
     background-size: cover;
