@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (min-width: 1046px) and (max-width: 1440px) {
+@media screen and (min-width: 1046px) and (max-width: 1600px) {
        
     *{
         overflow-y: hidden;
@@ -11,7 +11,7 @@
     }
 
     #container-topo{
-        height: 41.3rem;
+        height: 100vh;
         width: 28rem;
     
     }
@@ -69,8 +69,8 @@
     }
 
     #container-topo{
-        width: 370px;
-        height: 609px;
+        width: 385px;
+        height: 100vh;
     
     }
 
@@ -150,6 +150,14 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 589px){
+   
+    #container-cards{
+        position: absolute;
+        left: 2rem;
+        top: 0;
+
+    }
+
     #front-card{
         top: 8rem;
         left: 10rem;

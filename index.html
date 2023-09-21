@@ -6,15 +6,13 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaquery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-
     <div id="container-geral">
-        <section id="container-topo"></section>
-       
+      <section id="container-topo"></section>
         <div id="container-cards">
             <div id="front-card">
-            
                 <span id="circulo"></span>
                 <span id="circulo2"></span>
                 <span class="exNumero z-index">0000 0000 0000 0000</span>
@@ -29,37 +27,34 @@
                 <img src="imagens/bg-card-back.png" alt="">
             </div>
         </div>
-        
-        
         <form id="container-cadastro">
-            
+        <section id="confirma-cadastro">
+            <div id="circulo-confirma">
+                <span class="material-symbols-outlined" id="check">check</span>
+            </div>
+            <h1>CADASTRADO</h1>
+            <p id="paragrafo">continue para terminar o pagamento</p>
+        </section>
+        <section id="display-input">
             <div class="container-input">
-
                 <label for="card-name" class="label">NOME NO CARTÃO</label>
-                <input type="text" name="" id="card-name" maxlength="30" placeholder="ex.: Andrade Silva">
-                <p id="p-nome">Preencha este campo</p>
-        
+                    <input type="text" name="" id="card-name" maxlength="30" placeholder="ex.: Andrade Silva">
+                    <p id="p-nome">Preencha este campo</p>
             </div>
-        
             <div class="container-input">
-
                 <label for="card-number" class="label">NÚMERO DO CARTÃO</label>
-                <input type="text" name="" id="card-number" placeholder="5555 2222 1111 3333" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}">
-                <p id="p-numero">Preencha este campo</p>
-
+                    <input type="text" name="" id="card-number" placeholder="5555 2222 1111 3333" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}">
+                    <p id="p-numero">Preencha este campo</p>
             </div>
-        
-            <label class="label codigo" for="dgMes">VALIDADE (MM/AA)</label>
-            <label class="label codigo" for="dgCvc">CÓDIGO DE SEGURANÇA</label>
-        
-            <input type="text" name="" class="data" id="dgMes" placeholder="MM" maxlength="2" pattern="\d{2}">
-            <input type="text" name="" class="data" id="dgAno" placeholder="AA" maxlength="2" pattern="\d{2}">
-            <input type="text" name="" class="data cvc" id="dgCvc" placeholder="CVC" maxlength="3" pattern="\d{3}">
-            <p id="p-data">Preencha o campo</p><p id="p-cvc">Preencha este campo</p>
-            
+                <label class="label codigo" for="dgMes">VALIDADE (MM/AA)</label>
+                <label class="label codigo" for="dgCvc">CÓDIGO DE SEGURANÇA</label>
+                    <input type="text" name="" class="data" id="dgMes" placeholder="MM" maxlength="2" pattern="\d{2}">
+                    <input type="text" name="" class="data" id="dgAno" placeholder="AA" maxlength="2" pattern="\d{2}">
+                    <input type="text" name="" class="data cvc" id="dgCvc" placeholder="CVC" maxlength="3" pattern="\d{3}">
+                    <p id="p-data">Preencha o campo</p>
+                    <p id="p-cvc">Preencha este campo</p>
+            </section>
             <button id="submit">CADASTRAR</button>
-        
-        
         </form>
     </div>
     <script src="functions.js"></script>
