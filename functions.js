@@ -56,3 +56,13 @@ function verificarEnvio() {
     }   
   return alerta;
 }
+
+function intervalo(){
+    setTimeout(() => {
+    display.style.display = 'none'
+    confirma.style.display = 'flex'
+    submit.style.display = 'none'
+    continuar.style.display = 'block'
+
+}, 1000);}
+

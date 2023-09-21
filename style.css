@@ -141,7 +141,7 @@ p{
 
 }
 
-input,#submit{
+input,#submit,#continuar{
     display: block;
     width: 100%;
     padding: 0.5rem;
@@ -174,7 +174,7 @@ input::placeholder{
     left: 12.4rem;
 }
 
-#submit{
+#submit,#continuar{
     cursor: pointer;
     margin-top: 10%;
     padding: 1.2rem;
@@ -182,6 +182,10 @@ input::placeholder{
     border-radius: 10px;
     background-color: #22092F;
     color: white;
+}
+
+#continuar{
+    display: none;
 }
 
 #confirma-cadastro{

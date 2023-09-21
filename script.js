@@ -18,6 +18,7 @@
     const pData = document.querySelector('#p-data')
     const pCvc = document.querySelector('#p-cvc')
     const submit = document.querySelector('#submit')
+    const continuar = document.querySelector("#continuar")
     const array = [dgNumero,dgNome,dgMes,dgAno,dgCvc]
  
 // Eventos de entrada de input
@@ -71,14 +72,16 @@
 
     submit.addEventListener('click',(e)=>{
        const verificar = verificarEnvio()
+       e.preventDefault()
        if (verificar) {
-            e.preventDefault()
             alert(verificar)
 
        }else{
-            e.preventDefault()
-            display.style.display = 'none'
-            confirma.style.display = 'flex'
-            submit.innerHTML = 'CONTINUAR'
+            intervalo()
        }
+    })
+
+    continuar.addEventListener('click',(e)=>{
+        form.action = 'https://www.amazon.com.br/ref=nav_logo'
+
     })
