@@ -1,6 +1,8 @@
 
 //Atribuição do DOM
     const form = document.querySelector('#container-cadastro')
+    const confirma = document.querySelector('#confirma-cadastro')
+    const display = document.querySelector('#display-input')
     const dgNumero = document.querySelector('#card-number')
     const dgNome = document.querySelector('#card-name')
     const dgMes = document.querySelector('#dgMes')
@@ -68,14 +70,15 @@
     })
 
     submit.addEventListener('click',(e)=>{
-        const verificar = verificarEnvio()
-        if (verificar) {
+       const verificar = verificarEnvio()
+       if (verificar) {
             e.preventDefault()
             alert(verificar)
 
        }else{
-            form.action = "http://www.devmedia.com.br/guia/javascript/34372";
-            console.log('passei do prevent');
+            e.preventDefault()
+            display.style.display = 'none'
+            confirma.style.display = 'flex'
+            submit.innerHTML = 'CONTINUAR'
        }
-    
     })

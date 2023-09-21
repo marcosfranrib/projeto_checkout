@@ -177,12 +177,11 @@ input::placeholder{
 #submit{
     cursor: pointer;
     margin-top: 10%;
-    padding: 1rem;
+    padding: 1.2rem;
     border: none;
     border-radius: 10px;
     background-color: #22092F;
     color: white;
-
 }
 
 #confirma-cadastro{
