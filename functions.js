@@ -51,9 +51,15 @@ function verificarEnvio() {
     for (let i = 0; i < array.length; i++) {
         if (array[i].value == '') {
             array[i].style.borderColor = 'red'
-            alerta = 'Preencha os campos vazios'
+            alerta = 'PREENCHA OS CAMPOS VAZIOS'
         }
-    }   
+    } 
+
+    if (dgNumero.value.length < 19) {
+        dgNumero.style.borderColor = 'red'
+        alerta = 'NUMERO DO CARTÃO INCOMPLETO'
+    }  
+
   return alerta;
 }
 
