@@ -1,10 +1,9 @@
 @charset "utf-8";
 
-@media screen and (min-width: 550px) and (max-width: 1440px) {
+@media screen and (min-width: 1046px) and (max-width: 1440px) {
        
     *{
         overflow-y: hidden;
-    
     }
    
     #container-geral{
@@ -19,7 +18,6 @@
 
     #container-cadastro{
         padding-top: 0;
-    
     }
 
     #front-card{
@@ -62,4 +60,98 @@
         font-size: 10px;
     }
 
+}
+
+@media screen and (min-width: 780px) and (max-width: 1045px){
+    
+    #container-geral{
+        display: flex;
+    }
+
+    #container-topo{
+        width: 370px;
+        height: 609px;
+    
+    }
+
+    #container-cadastro{
+        padding-top: 0;
+    }
+
+    #front-card,#back-card{
+        top: 9rem;
+        left: 5rem;
+    }
+
+    #back-card{
+        top: 21rem;
+    }
+
+}
+
+@media screen and (min-width: 590px) and (max-width: 779px){
+    
+    #container-geral{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #container-topo{
+        width: 100%;
+        height: 15rem;
+    
+    }
+
+    #container-cards{
+        position: absolute;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 220px;
+
+    }
+
+    #container-cadastro{
+        padding-top: 30px;
+    }
+
+    #front-card,#back-card,img{
+        position: sticky;
+        left: 0;
+        top: 0;
+        height: 10rem;
+        width: 18rem;
+        z-index: 0;
+    }
+
+    .z-index,#circulo,#circulo2{
+        z-index: 1;
+        font-size: 15px;
+    }
+
+    #cvc{ 
+        top: 4.3rem;
+        left: 14rem;
+    }
+
+    .exNumero{
+        top: 5.6rem;
+        left: 1.4rem;
+        letter-spacing: 3px;
+        font-size: 15.5px;
+    }
+
+    #nomeData{
+        top: 8rem;
+        padding: 0 20px;
+     
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 589px){
+    #front-card{
+        top: 8rem;
+        left: 10rem;
+    }
 }

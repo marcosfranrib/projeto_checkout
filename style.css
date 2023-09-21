@@ -64,11 +64,12 @@
     color: white;
     width: 100%;
     top: 8rem;
- 
+    z-index: 1;
 }
 
 #data,#mes,#ano,#exNome{
     font-size: 10px;
+    z-index: 1;
 }
 
 #data{
@@ -81,6 +82,7 @@
     color: white; 
     top: 4.2rem;
     left: 12.7rem;
+    z-index: 1;
 }
 
 

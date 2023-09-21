@@ -11,27 +11,27 @@
 
     <div id="container-geral">
         <section id="container-topo"></section>
-        <div id="front-card">
-        
-            <span id="circulo"></span>
-            <span id="circulo2"></span>
-            <span class="exNumero">0000 0000 0000 0000</span>
-            <span id="nomeData">
-                <span id="exNome">SEU NOME AQUI</span>
-                <span id="data"><span id="mes">00</span>/<span id="ano">00</span></span>
-            </span>
-    
-            <img src="imagens/bg-card-front.png" alt="">
-    
+       
+        <div id="container-cards">
+            <div id="front-card">
+            
+                <span id="circulo"></span>
+                <span id="circulo2"></span>
+                <span class="exNumero z-index">0000 0000 0000 0000</span>
+                <span id="nomeData">
+                    <span id="exNome" class="z-index">SEU NOME AQUI</span>
+                    <span id="data" class="z-index"><span id="mes" class="z-index">00</span>/<span id="ano" class="z-index">00</span></span>
+                </span>
+                <img src="imagens/bg-card-front.png" alt="">
+            </div>
+            <div id="back-card">
+                <span id="cvc" class="z-index">000</span>
+                <img src="imagens/bg-card-back.png" alt="">
+            </div>
         </div>
-    
-        <div id="back-card">
-            <span id="cvc">000</span>
-            <img src="imagens/bg-card-back.png" alt="">
-        </div>
         
         
-        <form id="container-cadastro" method="get">
+        <form id="container-cadastro">
             
             <div class="container-input">
 
@@ -57,7 +57,7 @@
             <input type="text" name="" class="data cvc" id="dgCvc" placeholder="CVC" maxlength="3" pattern="\d{3}">
             <p id="p-data">Preencha o campo</p><p id="p-cvc">Preencha este campo</p>
             
-            <input type="submit" value="CADASTRAR" id="submit">
+            <button id="submit">CADASTRAR</button>
         
         
         </form>

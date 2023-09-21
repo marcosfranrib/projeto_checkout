@@ -1,5 +1,6 @@
 
 //Atribuição do DOM
+    const form = document.querySelector('#container-cadastro')
     const dgNumero = document.querySelector('#card-number')
     const dgNome = document.querySelector('#card-name')
     const dgMes = document.querySelector('#dgMes')
@@ -73,7 +74,7 @@
             alert(verificar)
 
        }else{
-            window.location.href = "http://www.devmedia.com.br/guia/javascript/34372";
+            form.action = "http://www.devmedia.com.br/guia/javascript/34372";
             console.log('passei do prevent');
        }
     
