@@ -147,6 +147,11 @@
         padding: 0 20px;
      
     }
+
+    #confirma-cadastro{
+        margin-top: 15%;
+        margin-bottom: 17%;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 589px){
@@ -161,5 +166,10 @@
     #front-card{
         top: 8rem;
         left: 10rem;
+    }
+
+    #confirma-cadastro{
+        margin-top: 15%;
+        margin-bottom: 17%;
     }
 }
